@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{53e53278-0ea4-4093-b768-c37abd34b7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{0ce73177-51a8-4510-a431-798d18eba25e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Engine">
+      <UniqueIdentifier>{b1a6d88b-501d-423c-9984-1351ab77cfb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Engine">
+      <UniqueIdentifier>{2e3d4587-219a-4bac-b5d8-0d9ff1e5f740}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Components">
+      <UniqueIdentifier>{d875acac-be9a-4c20-a6e2-fdf40b8b6823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Components">
+      <UniqueIdentifier>{5732ef99-45e5-4165-ac78-13c02d7fb6a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Interfaces">
+      <UniqueIdentifier>{0546b9c8-28ee-42d2-8f34-2a463f3a4fed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Engine\Types">
+      <UniqueIdentifier>{390f52a0-3d66-405a-bb54-f01a61196a68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Engine\Types">
+      <UniqueIdentifier>{dd2f01cb-0ec7-466f-9d2e-0af576c10bf7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\Main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Engine\Game.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Engine\Window.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Components\Logo.cpp">
+      <Filter>Sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Engine\Types\Viewport.cpp">
+      <Filter>Sources\Engine\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Engine\GraphicLibrary.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Engine\Types\Actor.cpp">
+      <Filter>Sources\Engine\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Engine\Types\Level.cpp" />
+    <ClCompile Include="Sources\Components\Levels\MainMenu.cpp" />
+    <ClCompile Include="Sources\Engine\Types\Visitors\Ticker.cpp" />
+    <ClCompile Include="Sources\Engine\Types\MenuElement.cpp" />
+    <ClCompile Include="Sources\Engine\Types\MenuContainer.cpp" />
+    <ClCompile Include="Sources\Engine\TextRenderer.cpp" />
+    <ClCompile Include="Sources\Components\Button.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Engine\Game.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Components\Logo.h">
+      <Filter>Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Interfaces\ITickable.h">
+      <Filter>Headers\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Engine\Types\Viewport.h">
+      <Filter>Headers\Engine\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Engine\Window.h">
+      <Filter>Headers\Engine\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Engine\GraphicLibrary.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Engine\Types\Actor.h">
+      <Filter>Headers\Engine\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Interfaces\IRenderable.h">
+      <Filter>Headers\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Interfaces\IInteractable.h" />
+    <ClInclude Include="Headers\Components\Button.h" />
+    <ClInclude Include="Headers\Engine\Types\Level.h" />
+    <ClInclude Include="Headers\Components\Levels\MainMenu.h" />
+    <ClInclude Include="Headers\Engine\Types\Visitors\Abstract\Broadcaster.h" />
+    <ClInclude Include="Headers\Engine\Types\Visitors\Ticker.h" />
+    <ClInclude Include="Headers\Engine\Types\MenuElement.h" />
+    <ClInclude Include="Headers\Engine\Types\MenuContainer.h" />
+    <ClInclude Include="Headers\Engine\TextRenderer.h" />
+  </ItemGroup>
+</Project>
