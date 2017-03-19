@@ -1,7 +1,6 @@
 #pragma once
 
 #include <map>
-#include "Engine\Types\Actor.h"
 #include "Engine\Types\MenuElement.h"
 
 using namespace std;

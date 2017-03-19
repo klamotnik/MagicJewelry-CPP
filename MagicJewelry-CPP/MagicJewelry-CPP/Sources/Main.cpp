@@ -1,4 +1,3 @@
-#include "Engine\Types\Actor.h"
 #include "Engine\Game.h"
 
 #undef main
