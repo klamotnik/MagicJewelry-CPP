@@ -22,7 +22,7 @@ bool Actor::CanInteract()
 	return false;
 }
 
-void Actor::Interact()
+void Actor::Interact(SDL_Event* event)
 {
 }
 
@@ -32,13 +32,17 @@ void Actor::Refresh()
 }
 
 void Actor::Move(int x, int y, bool newPosition) {
-	SDL_Rect* rect = &viewport->GetProperties();
+	SDL_Rect* rect = viewport->GetProperties();
 	if (newPosition) {
 		rect->x = x;
 		rect->y = y;
 	}
-	rect->x += x;
-	rect->y += y;
+	else
+	{
+		rect->x += x;
+		rect->y += y;
+	}
+
 }
 
 Viewport* Actor::GetViewport()

@@ -8,7 +8,7 @@ class Actor : public IRenderable, public ITickable, public IInteractable
 {
 public:
 	virtual bool CanInteract() override;
-	virtual void Interact() override;
+	virtual void Interact(SDL_Event* event) override;
 	virtual void Refresh() override;
 	virtual Viewport* GetViewport() override;
 	virtual void Tick(int DeltaTime) override;

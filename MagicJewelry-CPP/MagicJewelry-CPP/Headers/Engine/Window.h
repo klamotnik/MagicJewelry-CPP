@@ -2,7 +2,7 @@
 
 #include <string>
 #include <SDL.h>
-#include "Interfaces\IRenderable.h"
+#include "Engine\Types\Viewport.h"
 
 using namespace std;
 
@@ -13,6 +13,7 @@ public:
 	~Window();
 	SDL_Surface* GetWindowSurface();
 	SDL_Window* GetWindow();
+	void DrawOnScreen(Viewport* viewportToDraw);
 private:
 	SDL_Surface* windowSurface;
 	SDL_Window* window;

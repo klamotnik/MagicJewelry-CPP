@@ -1,6 +1,5 @@
 #include <algorithm>
 #include "Engine\Types\Level.h"
-#include "Engine\GraphicLibrary.h"
 
 using namespace std;
 
@@ -15,7 +14,7 @@ void Level::Refresh()
 	ticker->Broadcast();
 	for (Actor* actor : actorList)
 		if (actor->NeedRefresh())
-			GraphicLibrary::DrawOnViewport(actor, this);
+			viewport->Draw(actor->GetViewport());// GraphicLibrary::DrawOnViewport(actor, this);
 }
 
 bool Level::NeedRefresh()
@@ -34,6 +33,16 @@ Viewport* Level::GetViewport()
 Ticker * Level::GetTicker()
 {
 	return ticker;
+}
+
+bool Level::CanInteract()
+{
+	return true;
+}
+
+void Level::Interact(SDL_Event* event)
+{
+	
 }
 
 void Level::AddActor(Actor* actor)

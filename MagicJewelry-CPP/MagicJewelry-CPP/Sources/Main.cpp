@@ -1,11 +1,11 @@
-#include "Engine\Game.h"
+#include "Engine\Engine.h"
 
 #undef main
 
 int main()
 {
-	Game* G = new Game();
-	G->Start();
-	delete G;
+	Engine* engine = new Engine();
+	engine->Start();
+	delete engine;
 	return 0;
 }

@@ -33,9 +33,6 @@
     <ClCompile Include="Sources\Main.cpp">
       <Filter>Sources</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\Engine\Game.cpp">
-      <Filter>Sources\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Sources\Engine\Window.cpp">
       <Filter>Sources\Engine</Filter>
     </ClCompile>
@@ -44,9 +41,6 @@
     </ClCompile>
     <ClCompile Include="Sources\Engine\Types\Viewport.cpp">
       <Filter>Sources\Engine\Types</Filter>
-    </ClCompile>
-    <ClCompile Include="Sources\Engine\GraphicLibrary.cpp">
-      <Filter>Sources\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Engine\Types\Actor.cpp">
       <Filter>Sources\Engine\Types</Filter>
@@ -58,11 +52,16 @@
     <ClCompile Include="Sources\Engine\Types\MenuContainer.cpp" />
     <ClCompile Include="Sources\Engine\TextRenderer.cpp" />
     <ClCompile Include="Sources\Components\Button.cpp" />
+    <ClCompile Include="Sources\Engine\LevelManager.cpp" />
+    <ClCompile Include="Sources\Components\Menus\Elements\PlayMenuElement.cpp" />
+    <ClCompile Include="Sources\Engine\Engine.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Components\Menus\Elements\ScoresMenuElement.cpp" />
+    <ClCompile Include="Sources\Components\Levels\Scores.cpp" />
+    <ClCompile Include="Sources\Components\Levels\Game.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\Engine\Game.h">
-      <Filter>Headers\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\Components\Logo.h">
       <Filter>Headers\Components</Filter>
     </ClInclude>
@@ -74,9 +73,6 @@
     </ClInclude>
     <ClInclude Include="Headers\Engine\Window.h">
       <Filter>Headers\Engine\Types</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\Engine\GraphicLibrary.h">
-      <Filter>Headers\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Engine\Types\Actor.h">
       <Filter>Headers\Engine\Types</Filter>
@@ -93,5 +89,14 @@
     <ClInclude Include="Headers\Engine\Types\MenuElement.h" />
     <ClInclude Include="Headers\Engine\Types\MenuContainer.h" />
     <ClInclude Include="Headers\Engine\TextRenderer.h" />
+    <ClInclude Include="Headers\Engine\LevelManager.h" />
+    <ClInclude Include="Headers\Components\Menus\Elements\PlayMenuElement.h" />
+    <ClInclude Include="Headers\Engine\Engine.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Components\Levels\Game.h" />
+    <ClInclude Include="Headers\Components\Menus\Elements\ScoresMenuElement.h" />
+    <ClInclude Include="Headers\Components\Levels\Scores.h" />
+    <ClInclude Include="Headers\Components\Menus\Elements\ExitMenuElement.h" />
   </ItemGroup>
 </Project>

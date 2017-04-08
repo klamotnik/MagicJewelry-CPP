@@ -7,6 +7,7 @@ class MainMenu : public Level
 {
 public:
 	MainMenu(Viewport* viewport);
+	virtual void Interact(SDL_Event* event) override;
 private:
 	MenuContainer* menuContainer;
 };

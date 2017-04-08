@@ -25,3 +25,9 @@ SDL_Window* Window::GetWindow()
 {
 	return window;
 }
+
+void Window::DrawOnScreen(Viewport* viewportToDraw)
+{
+	SDL_UpperBlit(viewportToDraw->GetSurface(), nullptr, windowSurface, viewportToDraw->GetProperties());
+	SDL_UpdateWindowSurface(window);
+}

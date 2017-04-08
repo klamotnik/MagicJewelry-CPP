@@ -1,14 +1,17 @@
 #pragma once
 
+#include <SDL.h>
 #include "Window.h"
 
-class Game
+class Engine
 {
 public:
-	Game();
-	~Game();
+	Engine();
+	~Engine();
 	void Start();
 private:
 	Window* window;
+	SDL_Event* event;
+	bool endGame;
 };
 
