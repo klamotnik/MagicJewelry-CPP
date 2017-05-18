@@ -11,6 +11,7 @@ using namespace std;
 class Level : public IRenderable, public IInteractable
 {
 public:
+	virtual ~Level();
 	void Refresh() override;
 	bool NeedRefresh() override;
 	Viewport* GetViewport() override;

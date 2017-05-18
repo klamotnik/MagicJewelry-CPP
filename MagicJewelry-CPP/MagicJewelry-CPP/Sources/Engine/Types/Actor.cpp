@@ -7,6 +7,11 @@ Actor::Actor()
 	//wiec zajmuje sie tym konstruktor konkretnego levela
 }
 
+Actor::~Actor()
+{
+	delete viewport;
+}
+
 Actor::Actor(Viewport* viewport)
 {
 	this->viewport = viewport;

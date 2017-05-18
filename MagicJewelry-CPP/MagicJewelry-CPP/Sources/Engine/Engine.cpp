@@ -21,22 +21,26 @@ void Engine::Start()
 {
 	srand(time(nullptr));
 	LevelManager* levelManager = LevelManager::GetInstance();
-	while (!endGame)
+	while(!endGame)
 	{
+		Level* level = levelManager->GetCurrentLevel();
 		//sprawdzenie klawiatury/myszy i rozgloszenie eventow
-		while (SDL_PollEvent(event))
+		while(SDL_PollEvent(event))
 		{
 			if (event->type == SDL_QUIT)
 				endGame = true;
 			else
-				levelManager->GetCurrentLevel()->Interact(event);
+				level->Interact(event);
 		}
 		//rozgloszenie ticka zostalo przeniesione do refresha levelu
-		levelManager->GetCurrentLevel()->Refresh();
-		if (window->GetWindowSurface())
+		level->Refresh();
+		if(window->GetWindowSurface())
 		{
 			window->DrawOnScreen(levelManager->GetCurrentLevel()->GetViewport());
 		}
-		SDL_Delay(20);
+		//Level change has been performed, delete current level
+		if (level != levelManager->GetCurrentLevel())
+			delete level;
+		SDL_Delay(25);
 	}
 }

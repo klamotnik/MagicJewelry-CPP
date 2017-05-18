@@ -1,8 +1,6 @@
 #include <cstdlib>
 #include "Components\Logo.h"
 
-using namespace std;
-
 #ifdef DEBUG
 Viewport** Logo::sprites = new Viewport*[9]
 {

@@ -1,20 +1,18 @@
 #include "Components\Levels\MainMenu.h"
 #include "Components\Logo.h"
-#include "Components\Menus\Elements\PlayMenuElement.h"
-#include "Components\Menus\Elements\ScoresMenuElement.h"
-#include "Components\Menus\Elements\ExitMenuElement.h"
+#include "Engine\LevelManager.h"
+#include "Components\Levels\Game.h"
+#include "Components\Levels\Scores.h"
 
 MainMenu::MainMenu(Viewport* viewport) : Level(viewport)
 {
-	AddActor(new Logo(100, 50, true));
-	//logo->Move(logo->GetViewport()->get);
+	AddActor(new Logo(165, 75, true));
 	menuContainer = new MenuContainer();
 	AddActor(menuContainer);
-
-	menuContainer->AddElement<PlayMenuElement>("1play", "Graj");
+	menuContainer->AddElement("1play", "Graj", [](SDL_Event* e) {LevelManager::GetInstance()->ChangeLevel<Game>(); });
 	menuContainer->SetActiveElement("1play");
-	menuContainer->AddElement<ScoresMenuElement>("2scores", "Wyniki");
-	menuContainer->AddElement<ExitMenuElement>("3end", "Koniec");
+	menuContainer->AddElement("2scores", "Wyniki", [](SDL_Event* e) {LevelManager::GetInstance()->ChangeLevel<Scores>(); });
+	menuContainer->AddElement("3end", "Koniec");
 }
 
 void MainMenu::Interact(SDL_Event* event)

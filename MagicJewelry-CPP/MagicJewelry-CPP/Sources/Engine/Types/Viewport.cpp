@@ -14,6 +14,13 @@ Viewport::Viewport(SDL_Surface* surface, int x, int y)
 	this->surface = surface;
 	surfaceProperties = { x, y, surface->w, surface->h };
 }
+
+Viewport::~Viewport()
+{
+	if(surface != nullptr)
+		SDL_FreeSurface(surface);
+}
+
 ///<summary>Loads an image located in path</summary>
 Viewport* Viewport::LoadSprite(const char* path, SDL_Rect position)
 {

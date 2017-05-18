@@ -11,6 +11,7 @@ public:
 	virtual void Refresh() override;
 	bool ChangeColor(LogoColor Color);
 private:
+	static Viewport** sprites;
 	LogoColor currentColor;
 	bool animate;
 	int timeFromChange;

@@ -53,13 +53,14 @@
     <ClCompile Include="Sources\Engine\TextRenderer.cpp" />
     <ClCompile Include="Sources\Components\Button.cpp" />
     <ClCompile Include="Sources\Engine\LevelManager.cpp" />
-    <ClCompile Include="Sources\Components\Menus\Elements\PlayMenuElement.cpp" />
     <ClCompile Include="Sources\Engine\Engine.cpp">
       <Filter>Sources\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\Components\Menus\Elements\ScoresMenuElement.cpp" />
     <ClCompile Include="Sources\Components\Levels\Scores.cpp" />
     <ClCompile Include="Sources\Components\Levels\Game.cpp" />
+    <ClCompile Include="Sources\Components\Brick.cpp" />
+    <ClCompile Include="Sources\Components\Board.cpp" />
+    <ClCompile Include="Sources\Components\NextBrickGroup.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Components\Logo.h">
@@ -90,13 +91,14 @@
     <ClInclude Include="Headers\Engine\Types\MenuContainer.h" />
     <ClInclude Include="Headers\Engine\TextRenderer.h" />
     <ClInclude Include="Headers\Engine\LevelManager.h" />
-    <ClInclude Include="Headers\Components\Menus\Elements\PlayMenuElement.h" />
     <ClInclude Include="Headers\Engine\Engine.h">
       <Filter>Headers\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Components\Levels\Game.h" />
-    <ClInclude Include="Headers\Components\Menus\Elements\ScoresMenuElement.h" />
     <ClInclude Include="Headers\Components\Levels\Scores.h" />
-    <ClInclude Include="Headers\Components\Menus\Elements\ExitMenuElement.h" />
+    <ClInclude Include="Headers\Engine\Types\Visitors\WindowManager.h" />
+    <ClInclude Include="Headers\Components\Brick.h" />
+    <ClInclude Include="Headers\Components\Board.h" />
+    <ClInclude Include="Headers\Components\NextBrickGroup.h" />
   </ItemGroup>
 </Project>

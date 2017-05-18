@@ -7,6 +7,7 @@ class Viewport
 public:
 	Viewport(SDL_Rect properties);
 	Viewport(SDL_Surface* surface, int x = 0, int y = 0);
+	~Viewport();
 	static Viewport* LoadSprite(const char* path, SDL_Rect position = { 0, 0, 0, 0 });
 	void Draw(Viewport* const &objectToDraw);
 	void Clear();

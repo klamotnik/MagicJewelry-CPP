@@ -9,12 +9,23 @@ Level::Level(Viewport* viewport)
 	ticker = new Ticker();
 }
 
+Level::~Level()
+{
+	//clear actor list
+	while (!actorList.empty())
+	{
+		delete actorList.front();
+		actorList.remove(actorList.front());
+	}
+	delete viewport;
+}
+
 void Level::Refresh()
 {
 	ticker->Broadcast();
 	for (Actor* actor : actorList)
 		if (actor->NeedRefresh())
-			viewport->Draw(actor->GetViewport());// GraphicLibrary::DrawOnViewport(actor, this);
+			viewport->Draw(actor->GetViewport());
 }
 
 bool Level::NeedRefresh()

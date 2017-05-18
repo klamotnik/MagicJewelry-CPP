@@ -7,6 +7,7 @@
 class Actor : public IRenderable, public ITickable, public IInteractable
 {
 public:
+	virtual ~Actor();
 	virtual bool CanInteract() override;
 	virtual void Interact(SDL_Event* event) override;
 	virtual void Refresh() override;
@@ -15,7 +16,6 @@ public:
 	virtual bool NeedRefresh() override;
 	void Move(int x, int y, bool newPosition = false);
 protected:
-	static Viewport** sprites;
 	bool needRefresh;
 	Viewport* viewport;
 	Actor();

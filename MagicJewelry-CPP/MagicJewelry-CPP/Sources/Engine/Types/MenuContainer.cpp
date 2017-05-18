@@ -12,6 +12,11 @@ MenuContainer::MenuContainer()
 
 MenuContainer::~MenuContainer()
 {
+	while (!menuElements.empty())
+	{
+		delete menuElements.begin()->second;
+		menuElements.erase(menuElements.begin()->first);
+	}
 }
 
 bool MenuContainer::CanInteract()
@@ -51,7 +56,7 @@ void MenuContainer::Interact(SDL_Event* event)
 	}
 }
 
-bool MenuContainer::AddElement(char* name, char* caption)
+bool MenuContainer::AddElement(char* name, char* caption, void(*action)(SDL_Event*))
 {
 	MenuElement* me = nullptr;
 	if(menuElements.begin() != menuElements.end())
@@ -60,7 +65,7 @@ bool MenuContainer::AddElement(char* name, char* caption)
 		if(pair != menuElements.end())
 			return false;
 	}
-	menuElements[name] = new MenuElement(name, caption);
+	menuElements[name] = new MenuElement(name, caption, action);
 	int w = 0, h = 0;
 	for(pair<char*, MenuElement*> pair : menuElements)
 	{
@@ -69,7 +74,7 @@ bool MenuContainer::AddElement(char* name, char* caption)
 		w += elementViewport->GetWidth();
 	}
 	delete viewport;
-	viewport = new Viewport({ 0,200, w, h });
+	viewport = new Viewport({ (640 - w) / 2,250, w, h });
 	needRefresh = true;
 	return true;
 }

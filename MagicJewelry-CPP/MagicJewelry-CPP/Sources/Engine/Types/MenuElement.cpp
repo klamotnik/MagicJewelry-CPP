@@ -2,18 +2,13 @@
 #include "Engine\TextRenderer.h"
 #include "Engine\LevelManager.h"
 
-MenuElement::MenuElement(char* name, char* caption)// : Name(name), Caption(caption)
+MenuElement::MenuElement(char* name, char* caption, void (*action)(SDL_Event*))
 {
 	Name = name;
 	Caption = caption;
-	
+	Action = action;
 	viewport = TextRenderer::GetInstance(TextRenderer::Color::WHITE)->RenderText(Caption);
 	needRefresh = false;
-}
-
-
-MenuElement::~MenuElement()
-{
 }
 
 void MenuElement::SetActive(bool active)
@@ -35,5 +30,6 @@ bool MenuElement::NeedRefresh() {
 
 void MenuElement::Interact(SDL_Event* e)
 {
-
+	if(Action != nullptr)
+		(*Action)(e);
 }

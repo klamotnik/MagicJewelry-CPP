@@ -5,8 +5,7 @@
 class MenuElement : public Actor
 {
 public:
-	MenuElement(char* name, char* caption);
-	~MenuElement();
+	MenuElement(char* name, char* caption, void(*action)(SDL_Event*) = nullptr);
 	void SetActive(bool active);
 	virtual void Refresh() override;
 	virtual bool NeedRefresh() override;
@@ -15,6 +14,6 @@ private:
 	char* Name;
 	char* Caption; 
 	bool active;
-	//MenuContainer* Parent;
+	void (*Action)(SDL_Event* e);
 };
 
